@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel='stylesheet' href="{% static 'css/person/work.css' %}">
+<h2 class='heading1'>WORK</h2>
+<div class="container">
+    <div class="inner-cont">
+        <img src="https://i.ibb.co/HVWR99V/person.png" alt="person" class="div-cont">
+        <a class="cont-text" href="{% url 'personal' %}">PERSONAL WORK</a>
+    </div>
+    <div class="inner-cont">
+        <img src="https://i.ibb.co/nsHSx7M/contrib.png" alt="contrib" class="div-cont">
+        <a class="cont-text" href="{% url 'contribute' %}">CONTRIBUTED WORK</a>
+    </div>
+    <div class="inner-cont">
+        <img src="https://i.ibb.co/jTV18p8/photo.png" alt="photo" class="div-cont">
+        <a class="cont-text" href="{% url 'photography' %}">PHOTOGRAPHY WORK</a>
+    </div>
+</div>
+{% endblock content %}
+
+

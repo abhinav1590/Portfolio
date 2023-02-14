@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel='stylesheet' href="{% static 'css/person/work/personalWork.css' %}">
+<h1 class='heading1'>PERSONAL</h1>
+<div class='container'>
+    {% for work in personal %} 
+    <div class='inner-cont'>
+        <img class='work-img' src= '{{ work.personalWorkImage.url }}'>
+        <h4 class='cont-text'><a href='{{ work.personalLink }}'>{{ work.personalName }}</a></h4>
+        <p class="descript"> {{ work.personalWorkDescription }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

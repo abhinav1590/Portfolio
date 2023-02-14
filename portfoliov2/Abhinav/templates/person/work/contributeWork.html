@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel='stylesheet' href="{% static 'css/person/work/contributeWork.css' %}">
+<h1 class='heading1'>CONTRIBUTIONS</h1>
+<div class='container'>
+    {% for work in contributed %} 
+    <div class='inner-cont'>
+        <img class='work-img' src= '{{ work.contributedWorkImage.url }}'>
+        <h4 class='cont-text'><a href='{{ work.contributedLink }}'>{{ work.contributedName }}</a></h4>
+        <p class="descript"> {{ work.contributedWorkDescription }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

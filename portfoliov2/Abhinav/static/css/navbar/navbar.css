@@ -1,0 +1,66 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.topnav {
+    position: fixed;
+    display: block;
+    top: 45%;
+    right: 0;
+}
+.container-nav {
+    width: 30px;
+    height: 100px;
+    background-color: #2b2a29;
+}
+.container-nav h3 {
+    transform: rotate(-90deg);
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    right:0px;    
+    left: 4px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+#icon {
+    right: 0;
+    cursor: pointer;
+}
+.sidenav {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1;
+  top: 0; 
+  right: 0; 
+  background: #080808;
+  overflow-x: hidden; 
+  padding: 10% 0 0 0; 
+  transition: 0.2s ease-in; 
+}
+.sidenav a {
+  padding: 10px 15px 8px 20px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  display: block;
+  transition: 0.1s;
+}
+.sidenav .tag {
+  padding-left: 40px;
+  background-color:#080808;
+  color: #eeaeca;
+  transition: 0.1s;
+}
+.sidenav .tag:hover {
+  color: #000;
+  background-color: #eeaeca;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  font-size: 2rem;
+  cursor: pointer;
+}

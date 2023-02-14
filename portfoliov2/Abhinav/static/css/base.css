@@ -1,0 +1,46 @@
+@keyframes transOnLoad {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white; 
+    background: rgb(5,5,24);
+    background: radial-gradient(circle, rgba(5,5,24,1) 34%, rgba(7,31,36,1) 53%, rgba(0,0,0,1) 80%, rgba(0,0,0,1) 99%);
+    margin: 0;
+    padding: 0;
+    animation: transOnLoad 0.7s ease-in-out;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

@@ -1,0 +1,14 @@
+{% load static %}
+<link rel='stylesheet' href="{% static 'css/navbar/navbar.css' %}">
+<div id="mySidenav" class="sidenav">
+    <a  class="closebtn" onclick="closeNav()">&times;</a>
+    <a class='tag' href = '{% url 'home' %}'>Home</a>
+    <a class='tag' href = '{% url 'about' %}'>About</a>
+    <a class='tag' href = '{% url 'work' %}'>Work</a>
+    <a class='tag' href = '{% url 'form' %}'>Get In Touch</a>
+</div>
+<div class="topnav">
+    <span id='icon' onclick="openNav()"><div class="container-nav"><h3>MENU</h3></div></span>
+</div>
+  
+<script src='{% static 'js/navbar/navbar.js' %}'></script>

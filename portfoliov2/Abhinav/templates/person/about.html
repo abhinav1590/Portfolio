@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel='stylesheet' href="{% static 'css/person/about.css' %}">
+{% for about in about %}
+<h2 class='heading1'>ABOUT ME</h2>
+<div class='center-div'> 
+    <div class='about-main'>
+        <img class='about-img' src= '{{ about.Image.url }}'>
+        <p class='about-me'>{{ about.description|linebreaksbr }}</p>
+    </div> 
+</div>
+{% endfor %}
+{% endblock content %}

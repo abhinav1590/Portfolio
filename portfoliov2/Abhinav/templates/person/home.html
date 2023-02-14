@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel='stylesheet' href="{% static 'css/person/home.css' %}">
+{% if messages %}
+{% for message in messages %}
+<ul id="messages">
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+</ul>
+{% endfor %}
+{% endif %}
+    {% for home in homes %}
+    <div class="container">
+        <video autoplay loop muted>
+            <source src={{ home.UserVideo.url }} type="video/mp4" />
+        </video>
+        <div class="text">
+            <h1>Abhinav Mishra</h1>
+        </div> 
+    </div>
+    <div class="feature-content">
+        <ul class="cards">
+            <div class="new-card" >
+                <img 
+                    class='bitmoji' 
+                    src= {{ home.UserBitmoji.url }}
+                >
+                <p 
+                    class= 'home-introduction'>
+                    {{ home.Introduction|linebreaksbr }}<br>
+                    <button class="button-38" role="button">
+                        <a 
+                        class='tag-home' 
+                        href = '{% url 'about' %}'
+                        > 
+                        Know More
+                        </a>
+                    </button>
+                </p>
+            </div>
+            <div class="new-card">
+                <img 
+                    class='bitmoji' 
+                    src= {{ home.UserWork.url }}
+                >
+                <p 
+                    class= 'home-introduction'>
+                    {{ home.workIntroduction|linebreaksbr }}<br>
+                    <button class="button-38" role="button">
+                        <a 
+                        class='tag-home' 
+                        href = '{% url 'work' %}'
+                        > 
+                        Know More
+                        </a>
+                    </button>
+                </p>
+            </div>
+        </ul>
+    </div>
+    {% endfor %}
+<script src='{% static 'js/person/home.js' %}'></script>
+{% endblock content %}

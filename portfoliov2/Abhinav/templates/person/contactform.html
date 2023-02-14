@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+{% load static %}
+<link rel='stylesheet' href="{% static 'css/person/contact.css' %}">
+<h1 class="heading1">GET IN TOUCH</h1>
+<div id="form-div">
+    <div class="div-contain">
+        <form method="post">
+            {% csrf_token %}
+            <h4>{% render_field form.name class='div-h4' placeholder='Your Name' %}</h4> 
+            <h4>{% render_field form.email class='div-h4' placeholder='Your Email Address' %}</h4>
+            <h4>{% render_field form.message class='div-h4' placeholder='Enter Message here' %}</h4>
+            <button type="submit" class="btn-grad">SUBMIT</button>
+        </form>
+    </div>
+</div>
+<footer style="text-align: center;font-size: 1rem;">
+    <div>
+        <a href='https://www.instagram.com/abhixnv/'><img class='icon1' src="/media/image-contact/5282544_camera_instagram_social media_social network_instagram logo_icon.png"/>&nbsp;&nbsp;</a>
+        <a href='https://github.com/abhinav1590'><img class='icon1' src="/media/image-contact/4747499_github_icon.png"/>&nbsp;&nbsp;</a>
+        <a href='https://www.linkedin.com/in/abhinav-mishra-64486417a/'><img class='icon1' src="/media/image-contact/7639642_linkdin_logo_communication_social media_chat_icon.png"/>&nbsp;&nbsp;</a> 
+    </div>
+</footer>
+{% endblock content %}
