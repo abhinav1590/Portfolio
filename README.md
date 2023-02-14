@@ -1,5 +1,4 @@
 # Personal Portfolio
-==================
 
 This is a portfolio website built using Django Framework, where users can view my professional experience, education, and projects.
 
