@@ -60,4 +60,3 @@ class ContactPage(FormView):
             )  
         messages.success(self.request,'Your message was send successfully',fail_silently=True)
         return super(ContactPage,self).form_valid(form)
-
